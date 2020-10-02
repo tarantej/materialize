@@ -1293,32 +1293,155 @@
 
         <!-- END HERE -->
 
+        <!-- Forms and Input -->
 
-        <!--Import jQuery before materialize.js-->
-        <script type="text/javascript " src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
-        <script src=" " async defer></script>
-        <!--JavaScript at end of body for optimized loading-->
-        <script type="text/javascript " src="js/materialize.min.js "></script>
+        <h3>Forms and Input</h3>
 
-        <script>
-            $(document).ready(function() {
-                $('.dropdown-button').dropdown({
-                    constrainWidth: false,
-                    hover: true,
-                    belowOrigin: true,
-                    alignment: 'left'
-                });
+        <!-- START HERE -->
+        <form>
+            <!-- TEXT FIELD -->
+            <div class="input-field">
+                <input placeholder="Name" id="name" type="text">
+                <label for="name">Name</label>
+            </div>
 
-                // JAVASCRIPT START HERE //
+            <!-- VALUE & DISABLED -->
+            <div class="input-field">
+                <input placeholder="Email" id="email" type="email">
+                <label for="email">Email</label>
+            </div>
 
-                //  Activate Side Nav
+            <!-- TEXTAREA -->
+            <div class="input-field">
+                <textarea class="materialize-textarea" placeholder="Message" id="message"></textarea>
+                <label for="message">Message</label>
+            </div>
 
-                $('.button-collapse').sideNav();
+            <!-- INLINE FIELD -->
+            Number of users:
+            <div class="input-field inline">
+                <input id="users" type="text">
+                <label for="users">#</label>
+            </div>
+
+            <!-- ICON PREFIX -->
+            <div class="input-field">
+                <i class="material-icons prefix">phone</i>
+                <input id="phone" type="tel">
+                <label for="phone">Phone Number</label>
+            </div>
+
+            <!-- VALIDATION & ERROR -->
+            <div class="input-field">
+                <input class="validate" placeholder="Email" id="email" type="email">
+                <label data-error="invalid" data-success="valid" for="email">Email</label>
+            </div>
+
+            <!-- SELECT (Must be initialized) -->
+            <div class="input-field">
+                <select>
+<option value="0" disabled>--Select--</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+        </select>
+                <label>Select List</label>
+            </div>
+
+            <!-- OPTION GROUPS -->
+            <div class="input-field">
+                <select>
+<optgroup label="Optgroup1"></optgroup>
+<option value="1">1</option>
+<option value="2">2</option>
+</optgroup>
+
+<optgroup label="Optgroup2"></optgroup>
+<option value="3">3</option>
+<option value="4">4</option>
+</optgroup>
+                </select>
+                <label>Option group Select</label>
+            </div>
+
+            <!-- MULTIPLE SELECT -->
+            <div class="input-field">
+                <select multiple>
+<option value="0" disabled>--Select--</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+        </select>
+                <label>Multiple Select</label>
+            </div>
+
+            <!-- RADIO BUTTONS -->
+            <p>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input class="with-gap" type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </p>
+
+            <br>
+            <br>
+
+            <!-- CHECKBOXES -->
+            <p>
+                <input type="checkbox" name="tech" id="html">
+                <label for="html">HTML</label>
+                <input type="checkbox" name="tech" id="css" checked>
+                <label for="css">CSS</label>
+                <input class="filled-in" type="checkbox" name="tech" id="js">
+                <label for="php">JavaScript</label>
+                <input disabled type="checkbox" name="tech" id="php">
+                <label for="php">PHP</label>
+            </p>
+
+            <br>
+            <br>
+            <div>
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
 
 
 
+        <!-- END HERE -->
+
+    </div>
+    <!-- ./ CONTAINER END -->
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript " src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+    <script src=" " async defer></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript " src="js/materialize.min.js "></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.dropdown-button').dropdown({
+                constrainWidth: false,
+                hover: true,
+                belowOrigin: true,
+                alignment: 'left'
             });
-        </script>
+
+            // JAVASCRIPT START HERE //
+
+            //  Activate Side Nav
+
+            $('.button-collapse').sideNav();
+
+            //  Initialize select
+
+            $('select').material_select();
+
+
+
+        });
+    </script>
 </body>
 
 </html>
